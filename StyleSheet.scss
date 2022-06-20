@@ -1,0 +1,439 @@
+// Student: Evan Bezuidenhout
+// Task: 15
+// Capstone Project Final
+// File: StyleSheet.scss
+
+// ======================================
+// Global Color Settings
+// ======================================
+
+// Global Colors
+$ColorWhite: #FFFFFF;
+$ColorPurple: #7E49F2;
+$ColorDarkGrey: #1B1C1E;
+$ColorDarkestGrey: #141416;
+$ColorGrey: #888481;
+
+// ======================================
+// Global Color Settings End
+// ======================================
+
+
+
+// ======================================
+// Global Font Sizes
+// ======================================
+$HeadingTextSize: 5em;
+$SubHeadingTextSize: 3.5em;
+$HeroSubHeadingTextSize: 2.4em;
+$GeneralTextFontSize: 1.3em;
+$ButtonTextSize: 1em;
+// ======================================
+// Global Font Sizes End
+// ======================================
+
+
+
+// ======================================
+// Mixin's
+// ======================================
+
+// Global Background Image Positioning
+@mixin BGImagePositioning {
+    background-position: center center;
+    background-size: cover;
+    display: block;
+    height: 100%;
+}
+
+// Global Item Centering Code
+@mixin CenteringItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+// ======================================
+// Mixin's End
+// ======================================
+
+
+
+// ======================================
+// Global CSS Settings for body and pages
+// ======================================
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    user-select: none;
+    font-weight: lighter;
+    letter-spacing: 1.2px;
+    color: $ColorWhite;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: $ColorDarkGrey;
+}
+// ======================================
+// Global CSS Settings for body and pages End
+// ======================================
+
+
+
+// ======================================
+// Font Size Setting Section for all pages
+// ======================================
+// Setting the font sizes of all h1, h2, p, li, label, a, and input tags of the site.
+h1{
+    font-size: $HeadingTextSize;
+}
+h2{
+    font-size: $SubHeadingTextSize;
+}
+p, li, label{
+    font-size: $GeneralTextFontSize;
+}
+a, input{
+    font-size: $ButtonTextSize;
+    text-decoration: none;
+}
+// ======================================
+// Font Size Setting Section for all pages End
+// ======================================
+
+
+
+// ======================================
+// Purple Corners on Home Page CSS On Home Page (index.html)
+// ======================================
+// Positioning of the index/homepage purple corners for their respected corners
+.CornerTopRight{
+    z-index: -1;
+    width: 80%;
+    position: absolute;
+    img{
+        width: 6%;
+        float: right;
+    }
+}
+.CornerBottomLeft{
+    z-index: -1;
+    width: 80%;
+    margin-top: 19.7%;
+    position: absolute;
+    img{
+        position: relative;
+        left: 2%;
+        width: 6%;
+        float: left;
+        transform: rotate(180deg);
+    }
+}
+// ======================================
+// Purple Corners on Home Page CSS On Home Page (index.html) End
+// ======================================
+
+
+
+// ======================================
+// Button Global CSS
+// ======================================
+// This is the CSS for all buttons in the website
+.Button{
+    background-color: $ColorPurple;
+    // color: $ColorWhite;
+    display: none;
+    padding: 0.8em 1.8em;
+    border-radius: 0.2em;
+    z-index: 99;
+    margin: 2% 0%;
+    cursor: pointer;
+}
+// ======================================
+// Button Global CSS End
+// ======================================
+
+
+
+// =======================================================================
+// Global Containor CSS for AIPage.html, RenderingStyles.html and index.htmlpages
+// =======================================================================
+// The CSS for all divs classified as container which contain all text and images, makes it easier to set the width and position of all text sections throughout the site.
+.Container{
+    @include CenteringItems();
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+// =======================================================================
+// Global Containor CSS for AIPage.html, RenderingStyles.html and index.html pages
+// =======================================================================
+
+
+
+// ===============================================
+// Global Left and Right sectioning settings On Home Page (index.html)
+// ===============================================
+// Left is set to float to the left along with a width of 50% and use the CenteringItems mixin I created at the top
+.Left{
+    // The margin top is purely for the purple triangles to fit properly in the corners
+    margin-top: 2.5%;
+    float: left;
+    width: 50%;
+    @include CenteringItems();
+}
+// Right is set to float to the left along with a width of 50% and use the CenteringItems mixin I created at the top
+.Right{
+    // The margin top is purely for the purple triangles to fit properly in the corners
+    margin-top: 2.5%;
+    float: left;
+    width: 50%;
+    @include CenteringItems();
+}
+// ===============================================
+// Global Left and Right sectioning settings On Home Page (index.html) End
+// ===============================================
+
+
+
+// ================
+// Header Section Global
+// ================
+// The header snippet allows me to center the header of the site. If any added functionality is needed on the header, it can be added herein. I use display flex to set space between each 
+// header button / nav menu and center each of those items with added padding for white space away from the edges of the site.
+#Header{
+    display: flex;
+    align-items: center;
+    padding-top: 1.5rem;
+    flex-direction: column;
+}
+#hover{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#hover p{
+    font-size: 2rem;
+}
+.navMenu{
+    display: none;
+    margin: 0.5rem 0;
+}
+// ===================
+// Header Section Global End
+// ===================
+
+
+
+// ==================
+// Hero Section On Home Page (index.html)
+// ==================
+// The HeroSection ID is the background image and section for the hero on the index / home page.
+#HeroSection{
+    // Setting the background image and height and positioning of the section with the BGImagePositioning mixin and height elements,
+    background-image: linear-gradient(to bottom, rgba(27, 28, 30, 0.3), rgba(27, 28, 30, 2)), url(Images/HollowKnightHeroImage.jpg);
+    @include BGImagePositioning();
+    height: 100vh;
+    // I use the hero text container to center the text and buttons on the hero section of the height of 100vh
+    .HeroTextContainer{
+        // Used the CenteringItems mixin i created to center the items and then set the justify-content to normal so that the text is not in the middle of the HeroTextContainer classified div.
+        @include CenteringItems();
+        justify-content: normal;
+        margin-left: 10em;
+        height: 90%;
+        // In this snippet I set the hero's subheading to $HeroSubHeadingTextSize and the spacer's height to 3.2em
+        .HeroText{
+            h2{
+                font-size: $HeroSubHeadingTextSize;
+                margin: 7% 0%;
+            }
+        }        
+    }
+}
+// ==================
+// Hero Section On Home Page (index.html) End
+// ==================
+
+
+
+// ==================
+// Game AI Section On Home Page (index.html)
+// ==================
+#GameAISection{
+    margin-top: 15%;
+    @include CenteringItems();
+    .GameAIContainer{
+        width: 80%;
+        // The left block of the AI section on the homescreen is set to float left and have a width of 50% while using the CenterItems mixin to center everything in GameAILeft
+        .GameAILeftTextContainer{
+            width: 80%;
+            .Line{
+                border-bottom: solid $ColorPurple;
+                width: 26%;
+            }
+            p{
+                color: $ColorGrey;
+                margin: 5% 0%;
+            }
+        }
+        // The GameAIRight area in the GameAISection of the home page is set to float right and have a width of 50% while centering all items using the CenterItems mixin
+        .GameAISectionImage{
+            display: block;
+            width: 90%;
+        }
+    }
+}
+// ==================
+// Game AI Section On Home Page (index.html) End
+// ==================
+
+
+
+
+// =======================
+// Game Rendering Section On Home Page (index.html)
+// =======================
+#GameRenderingSection{
+    margin-top: 20%;
+    @include CenteringItems();
+    .GameRenderingContainer{
+        width: 80%;
+        // This snippet contains all CSS for the left section of the Game Rendering section on the home page, this snippet sets the section to float left and center the items using the mixin I created and set the width to 50%
+        .GameRenderingLeftImage{
+            display: block;
+            width: 87%;
+        }
+        // This code snippet contains all CSS for the right section of the Game rednering section on the home page and I center everything using the CenterImage mixin I created and set the width to 50%
+        .GameRenderingRightTextContainer{
+            width: 80%;
+            .Line{
+                border-bottom: solid $ColorPurple;
+                width: 60%;
+            }
+            p{
+                color: $ColorGrey;
+                margin: 5% 0%;
+            }
+        }
+    }
+}
+// ===========================
+// Game Rendering Section On Home Page (index.html) End
+// ===========================
+
+
+
+// ===========================
+// Questionare Section On Home Page (index.html)
+// ===========================
+#Questionare{
+    margin-top: 20%;
+    @include CenteringItems();
+    flex-direction: column;
+    .Line{
+        margin: 0.8em 0;
+        border-bottom: solid $ColorPurple;
+        width: 80%;
+    }
+    form{
+        margin: 3em 0;
+    }
+    #SubmitBtn{
+        background-color: $ColorPurple;
+        display: inline-block;
+        padding: 0.4em 1.3em;
+        border-radius: 0.2em;
+        border: none;
+        margin: 1em 0;
+    }
+}
+// ===========================
+// Questionare Section End On Home Page (index.html)
+// ===========================
+
+
+
+// ================
+// Footer Section
+// ================
+#FooterSection{
+    margin-top: 20%;
+    @include CenteringItems();
+    color: $ColorGrey;
+    background-color: $ColorDarkestGrey;
+    height: 8rem;
+    width: 100%;
+}
+// ================
+// Footer Section
+// ================
+
+
+
+// ========================
+// Global Article Section
+// This section controls majority of all attributes of all the pages
+// ========================
+#ArticleSection{
+    // First we center everything within this ID with the CenteringItems mixin and set a margin top and bottom of 15% along with the flex direction of column
+    margin: 15% 0%;
+    @include CenteringItems();
+    flex-direction: column;
+    // All underlines are controlled using this .Line class
+    .Line{
+        border-bottom: solid $ColorPurple;
+        width: 70%;
+        margin: 1.5% 0% 0% 0%;
+    }
+    // Set quote and subtext container div to grey with padding on AIPage.html
+    .SubText, q{
+        padding: 1% 0%;
+        color: $ColorGrey;
+    }
+    p{
+        margin: 2% 0%;  
+    }
+    img{
+        margin: 5% 0% 0% 0%;
+    }
+    // The a tag is used to make all links within articles / text purple and underlined to provide the user a visual note that it is a clickable link
+    .linkTxt{
+        text-decoration: underline;
+        color: $ColorPurple;
+    }
+    // I position the table in the center and then add margins, borders and color to the contents of the table with the below snippet, 
+    table{
+        // Centering the table with left and right margin set to auto
+        margin-left: auto;
+        margin-right: auto;
+        // border-collapse makes all borders fall into one line instead of double borders
+        border-collapse: collapse;
+        // Setting the colors of the headers of the table on AI Page
+        th{
+            background-color: $ColorPurple;
+            padding: 1% 0%;
+        }
+        // Settings for the tables contents borders and padding
+        td{
+            border: 1px solid $ColorWhite;
+            padding: 0.9%;
+        }
+    }
+    // CSS for the un ordered list in the uses of FSM on the AI page
+    ul{
+        color: $ColorWhite;
+        margin: 2% 0%;
+        // Sets the bullet point to a disk icon
+        list-style: disc;
+        padding: 2%;
+        li{
+            margin: 1% 0%;
+        }
+    }
+}
+// ===========================
+// Global Article Section End
+// ===========================
+.txt{
+    display: none;
+}

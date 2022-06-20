@@ -1,0 +1,72 @@
+<!-- Student: Evan Bezuidenhout -->
+<!-- Task: 15 -->
+<!-- Capstone Project Final -->
+<!-- File: RenderingStyles.html -->
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Game Dev Insight: Rendering Techniques</title>
+        <!-- Import JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Link JavaScript File -->
+        <script type='text/javascript' src="main.js"></script>
+        <link rel="stylesheet" href="StyleSheet.css" type="text/css">
+        <!-- Meta tags for general indexing on Google, not necesary here but still including it -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <div id="Header">
+            <div id="hover">
+                <p>Menu</p>
+                <a class="navMenu" href="RenderingStyles.html">Rendering Techniques</a>
+                <a class="navMenu" href="AIPage.html">Artificial Intelegence</a>
+                <a class="navMenu" href="SaveForLater.html">Saved Items</a>
+                <a class="navMenu" href="index.html">Home Page</a>
+            </div>
+        </div>
+        <!-- Header Section End -->
+
+        <!-- Article Section 1 -->
+        <section id="ArticleSection">
+            <div class="Container">
+                <h1>Rendering Techniques in Games</h1>
+                <div class="Line"></div>
+                <p class="SubText">There are loads of ways to improve a games performance by using literal asset managment scripts such as object pooling and such, however I will only speak of two methods in here, Level of Detail (LOD) and Occlusion Culling.</p>
+            </div>
+        </section>
+        <!-- Article Section 1 End -->
+
+        <!-- Article Section 2 -->
+        <section id="ArticleSection">
+            <div class="Container">
+                <h2>Level of Detail Meshes</h2>
+                <div class="Line"></div>
+                <p>LOD is used to set various levels of complexity and detail for objects and assets in games. Developers use this method to greatly reduse hardware strain a game has on a computer by reducing the level of detail a object or asset has the further a players camera is from the object.</p>
+                <p>For example, if the player is 15 meters from an object, the object will have a LOD of 1 which has a low polly version of that object, then if the player is say 5 meters from the object it'll have an LOD of 0 which is the original high rendered model of the object.</p>
+                <p>This is a great way to increase performance of a game and if you'd like a more in depth insight on this procees, feel free to follow this link to <a href="https://docs.unity3d.com/Manual/LevelOfDetail.html" target="https://docs.unity3d.com/Manual/LevelOfDetail.html">Unity's documentation on LOD Meshes.</a></p>
+            </div>
+        </section>
+        <!-- Article Section 2 End -->
+        
+        <!-- Article Section 3 -->
+        <section id="ArticleSection">
+            <div class="Container">
+                <h2>Occlusion Culling</h2>
+                <div class="Line"></div>
+                <img src="Images/OcclusionFrustumCulling.png" alt="Level Occlusion Culling">
+                <p>Occlusion Culling is a key component on greatly increasing the performance of any game you make,</p>
+                <p>This process improves performance by only rendering assets and objects that are within the view of the players camera. So if an object or level is behind the player it is essentially temporarily deleted and then brought back as the camera approaches it.</p>
+                <p>If you'd like to read more about this Occlusion Culling techniques, feel free to read about it on <a href="https://docs.unity3d.com/560/Documentation/Manual/OcclusionCulling.html" target="https://docs.unity3d.com/560/Documentation/Manual/OcclusionCulling.html">Unity's documentation about Occlusion Culling.</a></p>
+            </div>
+        </section>
+        <!-- Article Section 3 End -->
+        
+        <!-- Footer Section -->
+        <section id="FooterSection">
+            <p>Created by Evan Bezuidenhout</p>
+        </section>
+        <!-- Footer Section End -->
+    </body>
+</html>
