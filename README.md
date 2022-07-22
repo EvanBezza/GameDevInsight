@@ -22,7 +22,7 @@ To install / view the site / files.
 
 
 ## Usage 🧑🏼‍💻
-To use and navigate the project foloow the below steps or view it as it currently is online via this link. [GameDevInsightSite](https://evanbezza.github.io/GameDevInsight/)
+To use and navigate the project follow the below steps or view it as it currently is online via this link. [GameDevInsightSite](https://evanbezza.github.io/GameDevInsight/)
 
 - After cloning a local repository on you computer, navigate to index.html
 - When opening index.html the site will open up on your favourite browser
