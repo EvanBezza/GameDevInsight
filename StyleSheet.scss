@@ -6,17 +6,12 @@
 // ======================================
 // Global Color Settings
 // ======================================
-
 // Global Colors
 $ColorWhite: #FFFFFF;
 $ColorPurple: #7E49F2;
 $ColorDarkGrey: #1B1C1E;
 $ColorDarkestGrey: #141416;
 $ColorGrey: #888481;
-
-// ======================================
-// Global Color Settings End
-// ======================================
 
 
 
@@ -28,16 +23,12 @@ $SubHeadingTextSize: 3.5em;
 $HeroSubHeadingTextSize: 2.4em;
 $GeneralTextFontSize: 1.3em;
 $ButtonTextSize: 1em;
-// ======================================
-// Global Font Sizes End
-// ======================================
 
 
 
 // ======================================
 // Mixin's
 // ======================================
-
 // Global Background Image Positioning
 @mixin BGImagePositioning {
     background-position: center center;
@@ -45,17 +36,12 @@ $ButtonTextSize: 1em;
     display: block;
     height: 100%;
 }
-
 // Global Item Centering Code
 @mixin CenteringItems {
     display: flex;
     justify-content: center;
     align-items: center;
 } 
-
-// ======================================
-// Mixin's End
-// ======================================
 
 
 
@@ -73,10 +59,12 @@ $ButtonTextSize: 1em;
 }
 body{
     background-color: $ColorDarkGrey;
+    min-height: calc(100vh - 4rem);
 }
-// ======================================
-// Global CSS Settings for body and pages End
-// ======================================
+// Used to position the footer at the bottom.
+main{
+    min-height: calc(100vh - 4rem);
+}
 
 
 
@@ -97,61 +85,25 @@ a, input{
     font-size: $ButtonTextSize;
     text-decoration: none;
 }
-// ======================================
-// Font Size Setting Section for all pages End
-// ======================================
-
-
-
-// ======================================
-// Purple Corners on Home Page CSS On Home Page (index.html)
-// ======================================
-// Positioning of the index/homepage purple corners for their respected corners
-.CornerTopRight{
-    z-index: -1;
-    width: 80%;
-    position: absolute;
-    img{
-        width: 6%;
-        float: right;
-    }
-}
-.CornerBottomLeft{
-    z-index: -1;
-    width: 80%;
-    margin-top: 19.7%;
-    position: absolute;
-    img{
-        position: relative;
-        left: 2%;
-        width: 6%;
-        float: left;
-        transform: rotate(180deg);
-    }
-}
-// ======================================
-// Purple Corners on Home Page CSS On Home Page (index.html) End
-// ======================================
 
 
 
 // ======================================
 // Button Global CSS
 // ======================================
-// This is the CSS for all buttons in the website
-.Button{
-    background-color: $ColorPurple;
-    // color: $ColorWhite;
+.txt{
     display: none;
+}
+// This is the CSS for all buttons in the website
+.Button, .likeBtn, .btn, .submitButton{
+    background-color: $ColorPurple;
+    display: inline-block;
     padding: 0.8em 1.8em;
     border-radius: 0.2em;
     z-index: 99;
     margin: 2% 0%;
     cursor: pointer;
 }
-// ======================================
-// Button Global CSS End
-// ======================================
 
 
 
@@ -165,9 +117,6 @@ a, input{
     width: 70%;
     height: 100%;
 }
-// =======================================================================
-// Global Containor CSS for AIPage.html, RenderingStyles.html and index.html pages
-// =======================================================================
 
 
 
@@ -177,7 +126,7 @@ a, input{
 // Left is set to float to the left along with a width of 50% and use the CenteringItems mixin I created at the top
 .Left{
     // The margin top is purely for the purple triangles to fit properly in the corners
-    margin-top: 2.5%;
+    // margin-top: 2.5%;
     float: left;
     width: 50%;
     @include CenteringItems();
@@ -185,8 +134,8 @@ a, input{
 // Right is set to float to the left along with a width of 50% and use the CenteringItems mixin I created at the top
 .Right{
     // The margin top is purely for the purple triangles to fit properly in the corners
-    margin-top: 2.5%;
-    float: left;
+    // margin-top: 2.5%;
+    float: right;
     width: 50%;
     @include CenteringItems();
 }
@@ -250,17 +199,14 @@ a, input{
         }        
     }
 }
-// ==================
-// Hero Section On Home Page (index.html) End
-// ==================
 
 
 
-// ==================
+// ========================================
 // Game AI Section On Home Page (index.html)
-// ==================
+// ========================================
 #GameAISection{
-    margin-top: 15%;
+    margin-top: 10%;
     @include CenteringItems();
     .GameAIContainer{
         width: 80%;
@@ -283,18 +229,15 @@ a, input{
         }
     }
 }
-// ==================
-// Game AI Section On Home Page (index.html) End
-// ==================
 
 
 
 
-// =======================
+// ================================================
 // Game Rendering Section On Home Page (index.html)
-// =======================
+// ================================================
 #GameRenderingSection{
-    margin-top: 20%;
+    margin-top: 15%;
     @include CenteringItems();
     .GameRenderingContainer{
         width: 80%;
@@ -317,39 +260,7 @@ a, input{
         }
     }
 }
-// ===========================
-// Game Rendering Section On Home Page (index.html) End
-// ===========================
 
-
-
-// ===========================
-// Questionare Section On Home Page (index.html)
-// ===========================
-#Questionare{
-    margin-top: 20%;
-    @include CenteringItems();
-    flex-direction: column;
-    .Line{
-        margin: 0.8em 0;
-        border-bottom: solid $ColorPurple;
-        width: 80%;
-    }
-    form{
-        margin: 3em 0;
-    }
-    #SubmitBtn{
-        background-color: $ColorPurple;
-        display: inline-block;
-        padding: 0.4em 1.3em;
-        border-radius: 0.2em;
-        border: none;
-        margin: 1em 0;
-    }
-}
-// ===========================
-// Questionare Section End On Home Page (index.html)
-// ===========================
 
 
 
@@ -357,23 +268,20 @@ a, input{
 // Footer Section
 // ================
 #FooterSection{
-    margin-top: 20%;
+    margin-top: auto;
     @include CenteringItems();
     color: $ColorGrey;
     background-color: $ColorDarkestGrey;
-    height: 8rem;
+    height: 4rem;
     width: 100%;
 }
-// ================
-// Footer Section
-// ================
 
 
 
-// ========================
+// ======================
 // Global Article Section
+// ======================
 // This section controls majority of all attributes of all the pages
-// ========================
 #ArticleSection{
     // First we center everything within this ID with the CenteringItems mixin and set a margin top and bottom of 15% along with the flex direction of column
     margin: 15% 0%;
@@ -397,7 +305,7 @@ a, input{
         margin: 5% 0% 0% 0%;
     }
     // The a tag is used to make all links within articles / text purple and underlined to provide the user a visual note that it is a clickable link
-    .linkTxt{
+    #linkTxt{
         text-decoration: underline;
         color: $ColorPurple;
     }
@@ -422,18 +330,81 @@ a, input{
     // CSS for the un ordered list in the uses of FSM on the AI page
     ul{
         color: $ColorWhite;
-        margin: 2% 0%;
         // Sets the bullet point to a disk icon
         list-style: disc;
-        padding: 2%;
         li{
             margin: 1% 0%;
         }
     }
 }
-// ===========================
-// Global Article Section End
-// ===========================
-.txt{
+
+
+
+
+//=====================
+// Contact Form Styling
+//=====================
+.ContactUs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    h1{
+        padding: 2rem 0;
+    }
+}
+.ContactUsContainer{
+    input, textarea{
+        width: 100%;
+        margin-bottom: 1.5rem;
+        color: #141416;
+    }
+}
+
+
+
+// ==========================
+// Hiding the list on AI Page
+// ==========================
+#list{
     display: none;
+    margin: 0;
+}
+
+
+
+// =======================
+// Comment Section Styling
+// =======================
+#comentSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 15% 0;
+    #commentForm input, textarea{
+        color: $ColorDarkGrey;
+        label{
+            font-size: $SubHeadingTextSize;
+        }
+    }
+}
+
+
+
+// ================
+// SavedPageStyling
+// ================
+#savedItemsContainer{
+    @include CenteringItems();
+    margin: 5% 0;
+    #SavedItemsContainer{
+        display: inline-block;
+        .ArticleContainer{
+            margin: 5% 0;
+            .Button{
+                padding: 2%;
+            }
+        }
+    }
 }

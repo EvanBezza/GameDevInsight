@@ -13,6 +13,11 @@
 
 body {
   background-color: #1B1C1E;
+  min-height: calc(100vh - 4rem);
+}
+
+main {
+  min-height: calc(100vh - 4rem);
 }
 
 h1 {
@@ -32,36 +37,13 @@ a, input {
   text-decoration: none;
 }
 
-.CornerTopRight {
-  z-index: -1;
-  width: 80%;
-  position: absolute;
-}
-
-.CornerTopRight img {
-  width: 6%;
-  float: right;
-}
-
-.CornerBottomLeft {
-  z-index: -1;
-  width: 80%;
-  margin-top: 19.7%;
-  position: absolute;
-}
-
-.CornerBottomLeft img {
-  position: relative;
-  left: 2%;
-  width: 6%;
-  float: left;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.Button {
-  background-color: #7E49F2;
+.txt {
   display: none;
+}
+
+.Button, .likeBtn, .btn, .submitButton {
+  background-color: #7E49F2;
+  display: inline-block;
   padding: 0.8em 1.8em;
   border-radius: 0.2em;
   z-index: 99;
@@ -70,75 +52,40 @@ a, input {
 }
 
 .Container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 70%;
   height: 100%;
 }
 
 .Left {
-  margin-top: 2.5%;
   float: left;
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .Right {
-  margin-top: 2.5%;
-  float: left;
+  float: right;
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #Header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-top: 1.5rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 #hover {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -152,231 +99,181 @@ a, input {
 }
 
 #HeroSection {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 28, 30, 0.3)), to(#1b1c1e)), url(Images/HollowKnightHeroImage.jpg);
-  background-image: linear-gradient(to bottom, rgba(27, 28, 30, 0.3), #1b1c1e), url(Images/HollowKnightHeroImage.jpg);
+  background-image: linear-gradient(to bottom, rgba(27, 28, 30, 0.3), rgb(27, 28, 30)), url(Images/HollowKnightHeroImage.jpg);
   background-position: center center;
   background-size: cover;
   display: block;
   height: 100%;
   height: 100vh;
 }
-
 #HeroSection .HeroTextContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
+  justify-content: center;
+  align-items: center;
+  justify-content: normal;
   margin-left: 10em;
   height: 90%;
 }
-
 #HeroSection .HeroTextContainer .HeroText h2 {
   font-size: 2.4em;
   margin: 7% 0%;
 }
 
 #GameAISection {
-  margin-top: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-top: 10%;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #GameAISection .GameAIContainer {
   width: 80%;
 }
-
 #GameAISection .GameAIContainer .GameAILeftTextContainer {
   width: 80%;
 }
-
 #GameAISection .GameAIContainer .GameAILeftTextContainer .Line {
   border-bottom: solid #7E49F2;
   width: 26%;
 }
-
 #GameAISection .GameAIContainer .GameAILeftTextContainer p {
   color: #888481;
   margin: 5% 0%;
 }
-
 #GameAISection .GameAIContainer .GameAISectionImage {
   display: block;
   width: 90%;
 }
 
 #GameRenderingSection {
-  margin-top: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-top: 15%;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #GameRenderingSection .GameRenderingContainer {
   width: 80%;
 }
-
 #GameRenderingSection .GameRenderingContainer .GameRenderingLeftImage {
   display: block;
   width: 87%;
 }
-
 #GameRenderingSection .GameRenderingContainer .GameRenderingRightTextContainer {
   width: 80%;
 }
-
 #GameRenderingSection .GameRenderingContainer .GameRenderingRightTextContainer .Line {
   border-bottom: solid #7E49F2;
   width: 60%;
 }
-
 #GameRenderingSection .GameRenderingContainer .GameRenderingRightTextContainer p {
   color: #888481;
   margin: 5% 0%;
 }
 
-#Questionare {
-  margin-top: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#Questionare .Line {
-  margin: 0.8em 0;
-  border-bottom: solid #7E49F2;
-  width: 80%;
-}
-
-#Questionare form {
-  margin: 3em 0;
-}
-
-#Questionare #SubmitBtn {
-  background-color: #7E49F2;
-  display: inline-block;
-  padding: 0.4em 1.3em;
-  border-radius: 0.2em;
-  border: none;
-  margin: 1em 0;
-}
-
 #FooterSection {
-  margin-top: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-top: auto;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: #888481;
   background-color: #141416;
-  height: 8rem;
+  height: 4rem;
   width: 100%;
 }
 
 #ArticleSection {
   margin: 15% 0%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 #ArticleSection .Line {
   border-bottom: solid #7E49F2;
   width: 70%;
   margin: 1.5% 0% 0% 0%;
 }
-
 #ArticleSection .SubText, #ArticleSection q {
   padding: 1% 0%;
   color: #888481;
 }
-
 #ArticleSection p {
   margin: 2% 0%;
 }
-
 #ArticleSection img {
   margin: 5% 0% 0% 0%;
 }
-
-#ArticleSection .linkTxt {
+#ArticleSection #linkTxt {
   text-decoration: underline;
   color: #7E49F2;
 }
-
 #ArticleSection table {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
 }
-
 #ArticleSection table th {
   background-color: #7E49F2;
   padding: 1% 0%;
 }
-
 #ArticleSection table td {
   border: 1px solid #FFFFFF;
   padding: 0.9%;
 }
-
 #ArticleSection ul {
   color: #FFFFFF;
-  margin: 2% 0%;
   list-style: disc;
-  padding: 2%;
 }
-
 #ArticleSection ul li {
   margin: 1% 0%;
 }
 
-.txt {
-  display: none;
+.ContactUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
 }
-/*# sourceMappingURL=StyleSheet.css.map */
+.ContactUs h1 {
+  padding: 2rem 0;
+}
+
+.ContactUsContainer input, .ContactUsContainer textarea {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  color: #141416;
+}
+
+#list {
+  display: none;
+  margin: 0;
+}
+
+#comentSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 15% 0;
+}
+#comentSection #commentForm input, #comentSection textarea {
+  color: #1B1C1E;
+}
+#comentSection #commentForm input label, #comentSection textarea label {
+  font-size: 3.5em;
+}
+
+#savedItemsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 0;
+}
+#savedItemsContainer #SavedItemsContainer {
+  display: inline-block;
+}
+#savedItemsContainer #SavedItemsContainer .ArticleContainer {
+  margin: 5% 0;
+}
+#savedItemsContainer #SavedItemsContainer .ArticleContainer .Button {
+  padding: 2%;
+}/*# sourceMappingURL=StyleSheet.css.map */

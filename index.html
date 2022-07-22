@@ -6,9 +6,9 @@
 <html>
     <head lang="en">
         <title>Game Dev Insight</title>
-        <!-- Import JQUERY -->
+        <!-- ===== Import JQUERY ===== -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Link JavaScript File -->
+        <!-- ===== Link JavaScript File ===== -->
         <script type='text/javascript' src="main.js"></script>
         <link rel="stylesheet" href="StyleSheet.css" type="text/css">
         <!-- Meta tags for general indexing on Google, not necesary here but still including it -->
@@ -25,11 +25,12 @@
                     <a class="navMenu" href="RenderingStyles.html">Rendering Techniques</a>
                     <a class="navMenu" href="AIPage.html">Artificial Intelegence</a>
                     <a class="navMenu" href="SaveForLater.html">Saved Items</a>
+                    <a class="navMenu" href="conatct.html">Contact Me</a>
                     <a class="navMenu" href="index.html">Home Page</a>
                 </div>
             </div>
             <!-- Header Section End -->
-
+    
             <div class="BackgroundImage"></div>
             <div class="HeroTextContainer">
                 <div class="HeroText">
@@ -40,12 +41,12 @@
             </div>
         </div>
         <!-- Hero Section End -->
-
+    
         <!-- Article Section 1-->
         <section id="GameAISection">
             <div class="GameAIContainer">
                 <div class="CornerTopRight">
-                    <img src="Images/Evs_Corner.svg" alt="">
+                    <!-- <img src="Images/Evs_Corner.svg" alt=""> -->
                 </div>
                 <!-- Left section of the id "GameAISection" -->
                 <div class="Left">
@@ -54,7 +55,12 @@
                         <div class="Line"></div>
                         <p>AI in a game is a means of bringing life to a world by giving the NPC's (Non player Characters) in the playable world a "brain".</p>
                         <p>One can achieve this in many ways but I have found that a Finite State Machine (FSM) works best. To read more on my exploration and finding on AI in Game Development, click the button below.</p>
-                        <a href="AIPage.html" class="Button">READ MORE</a>
+                        <div>
+                            <br>
+                            <a href="AIPage.html" class="Button">READ MORE</a>
+                            <a id="gameAIHome" class="Button">SAVE</a>
+                            <a id="likeBtn0" class="likeBtn">LIKE</a>
+                        </div>
                     </div>
                 </div>
                 <!-- Right section of the id "GameAISection" -->
@@ -62,74 +68,65 @@
                     <img class="GameAISectionImage" src="Images/StardewValleyNPCInteraction.jpg" alt="">
                 </div>
                 <div class="CornerBottomLeft">
-                    <img src="Images/Evs_Corner.svg" alt="">
+                    <!-- <img src="Images/Evs_Corner.svg" alt=""> -->
                 </div>
             </div>
         </section>
         <!-- Article Section 1 End -->
-
+    
         <!-- Article Section 2 -->
         <section id="GameRenderingSection">
             <div class="GameRenderingContainer">
                 <div class="CornerTopRight">
-                    <img src="Images/Evs_Corner.svg" alt="">
                 </div>
-                <!-- Left section of the id "GameRenderingSection" -->
                 <div class="Left">
                     <img class="GameRenderingLeftImage" src="Images/OcclusionFrustumCulling.png" alt="">
                 </div>
-                <!-- Right section of the id "GameRenderingSection" -->
                 <div class="Right">
                     <div class="GameRenderingRightTextContainer">
                         <h2>Game Rendering</h2>
                         <div class="Line"></div>
                         <p>As we know, games can take a massive toll on our computer hardware, which is why using the correct rendering strategies and load balancing strategies are vital for the best user experience and for your games compatibility with the hardware in the hands of the consumer.</p>
                         <p>One of the ways to do this is to use Occlusion Culling.</p>
-                        <a href="RenderingStyles.html" class="Button">READ MORE</a>
+                        <br>
+                        <div>
+                            <br>
+                            <a href="RenderingStyles.html" class="Button">READ MORE</a>
+                            <a id="gameRenderHome" class="Button">SAVE</a>
+                            <a id="likeBtn1" class="likeBtn">LIKE</a>
+                        </div>
                     </div>
                 </div>
                 <div class="CornerBottomLeft">
-                    <img src="Images/Evs_Corner.svg" alt="">
                 </div>
             </div>
         </section>
         <!-- Article Section 2 End -->
-
-        <!-- Article Section Questionare -->
-        <section id="Questionare">
-            <div class="Container">
-                <h2>What genre of games do you enjoy playing?</h2>
-                <div class="Line"></div>
-                <div class="QuestionareTextContainer">
-                    <!-- Radio Point Form and sumbission button -->
-                    <form action="#">
-                        <!-- Input type radio with the ID of action -->
-                        <input type="radio" name="Favourite Game Genre" id="action" value="Action">
-                        <!-- Label for ID "action" -->
-                        <label for="action">Action</label><br>
-                        <!-- Input type radio with the ID of adventure -->
-                        <input type="radio" name="Favourite Game Genre" id="adventure" value="Adventure">
-                        <!-- Label for ID "adventure" -->
-                        <label for="adventure">Adventure</label><br>
-                        <!-- Input type radio with the ID of puzzle -->
-                        <input type="radio" name="Favourite Game Genre" id="puzzle" value="Puzzle">
-                        <!-- Label for ID "puzzle" -->
-                        <label for="puzzle">Puzzle</label><br>
-                        <!-- Input type radio with the ID of fantasy -->
-                        <input type="radio" name="Favourite Game Genre" id="fantasy" value="Fantasy">
-                        <!-- Input type radio with the ID of fantasy -->
-                        <label for="fantasy">Fantasy</label><br>
-                        <!-- Submit button -->
-                        <input type="submit" value="Submit" id="SubmitBtn">
-                    </form>
-                </div>
-            </div>
+    
+        <!-- Comments Section -->
+        <section id="comentSection">
+            <h2>Comment Section</h2>
+                <!-- A form for the user comment section -->
+                <form id="commentForm">
+                    <label for="viewerName">Name:</label>
+                    <div>
+                        <input type="text" name="viewerName" id="viewerName" placeholder="Enter your name or a name you like..." required><br><br>
+                    </div>
+                    <label for="viewerComment">What did you think of the article?</label><br>
+                    <textarea name="viewerComment" id="viewerComment" rows="4" cols="50" placeholder="Share your thoughts..." required></textarea><br><br>
+                    <a id="submitComment" class="submitButton">Submit</a>
+                </form>
+    
+                <h3>Comments:</h3>
+                <br>
+                <!-- Add all user comments to the bellow div -->
+                <div id="visitorCommentSection"></div>
         </section>
-        <!-- Article Section Questionare End -->
-
+        <!-- Comments Section End -->
+        
         <!-- Footer Section -->
         <section id="FooterSection">
-            <p>Created by Evan Bezuidenhout</p>
+            <p>Created by <a href="https://evanbezza.com/" style="color: #A15CD5">Evan Bezuidenhout</a></p>
         </section>
         <!-- Footer Section End -->
     </body>

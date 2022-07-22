@@ -23,13 +23,13 @@
                 <a class="navMenu" href="RenderingStyles.html">Rendering Techniques</a>
                 <a class="navMenu" href="AIPage.html">Artificial Intelegence</a>
                 <a class="navMenu" href="SaveForLater.html">Saved Items</a>
+                <a class="navMenu" href="conatct.html">Contact Me</a>
                 <a class="navMenu" href="index.html">Home Page</a>
             </div>
         </div>
         <!-- Header Section End -->
         
         <!-- Article 1 -->
-        <section id="selectable1">
             <div id="ArticleSection">
                 <div class="Container">
                     <h1>Artificial Intelegence in Games</h1>
@@ -38,10 +38,9 @@
                 </div>
             </div>
             <!-- Article 1 End -->
-        </section>
         
         <!-- Article 2 End -->
-        <section id="selectable2">
+        <section id="Article1">
             <div id="ArticleSection">
                 <div class="Container">
                     <h2>What is a Finite-State Machine?</h2>
@@ -51,78 +50,98 @@
                         <p class="SubText" style="margin: 0; font-size: small;">Image from Evatotuts+ "FSM representing the brain of an enemy."</p>
                     </div>
                     <p class="TextContainer">A finite state machine is a hypothetical machine consisting of various states, if conditions for these states are met, the AI proceeds to execute that specific state, for example if a player is near an enemy, the enemy will go from a roaming state to an attack state since the codition of the player being near was met.</p>
+                    <div>
+                        <br>
+                        <a id="fsmDef" class="Button">SAVE</a>
+                        <a id="likeBtn3" class="likeBtn">LIKE</a>
+                    </div>
                 </div>
             </div>
             <!-- Article 2 End -->
         </section>
         
         <!-- Article 3 -->
-        <section id="ArticleSection">
-            <div class="Container">
-                <h2>Uses for a Finite-State Machine</h2>
-                <div class="Line"></div>
-                <div class="TextContainer">
-                    <p>A FSM can be used to give your non player characters a "brain" and allow them to react to the game world without any player input, you can use an FSM for,</p>
-                    <!-- Unordered List -->
-                    <a id="hideShow" class="Button" onclick="hideAndShowList()">Hide / Show List</a>
-                    <ul id="list">
-                        <!-- List Items -->
-                        <li>Enemies</li>
-                        <li>NPC's</li>
-                        <li>Boss Fight's</li>
-                        <li>Animal's</li>
-                        <li>Cars</li>
-                    </ul>
+        <section id="Article2">
+            <section id="ArticleSection">
+                <div class="Container">
+                    <h2>Uses for a Finite-State Machine</h2>
+                    <div class="Line"></div>
+                    <div class="TextContainer">
+                        <p>A FSM can be used to give your non player characters a "brain" and allow them to react to the game world without any player input, you can use an FSM for,</p>
+                        <!-- Unordered List -->
+                        <a id="hideShow" class="btn" onclick="hideAndShowList()">See Uses</a>
+                        <ul id="list">
+                            <!-- List Items -->
+                            <li>Enemies</li>
+                            <li>NPC's</li>
+                            <li>Boss Fight's</li>
+                            <li>Animal's</li>
+                            <li>Cars</li>
+                        </ul>
+                        <div>
+                            <br>
+                            <a id="fsmUses" class="Button">SAVE</a>
+                            <a id="likeBtn4" class="likeBtn">LIKE</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </section>
         <!-- Article 3 End -->
         
         <!-- Article 4 -->
-        <section id="ArticleSection">
-            <div class="Container">
-                <h2>An example of a FSM on a Boss</h2>
-                <div class="Line"></div>
-                <div class="TextContainer">
-                    <p>See below a table represnting states a Boss could have when fighting a player;</p>
-                    <table id="aiTable">
-                        <tr>
-                            <!-- Table headers -->
-                            <th>If</th>
-                            <th>State</th>
-                        </tr>
-                        <tr>
-                            <!-- Table contents -->
-                            <td>Player is near.</td>
-                            <td>Enter the melee attack state and target the player.</td>
-                        </tr>
-                        <tr>
-                            <!-- Table contents -->
-                            <td>Player is far.</td>
-                            <td>Enter the ranged attack state and target the player.</td>
-                        </tr>
-                        <tr>
-                            <!-- Table contents -->
-                            <td>Boss health is below 50%</td>
-                            <td>Enter the next attack pattern that is more challenging for the player</td>
-                        </tr>
-                        <tr>
-                            <!-- Table contents -->
-                            <td>Boss health is below 30% and the player is far away</td>
-                            <td>Enter the defensive state and heal.</td>
-                        </tr>
-                    </table>
-                    <p>Hopefully this table allows you to see in greater detail as to what a Finite-State Machine can be used for and how useful it can be.</p>
-                    <p>Of course there are ways of improving the flow of the machine as well as the execution and implementation.</p>
-                    <p>To read more on this subject and find more ways in implementing a FSM, refer to this article by Evatotuts+ <a class="linkTxt" href="https://gamedevelopment.tutsplus.com/tutorials/finite-state-machines-theory-and-implementation--gamedev-11867" target="https://gamedevelopment.tutsplus.com/tutorials/finite-state-machines-theory-and-implementation--gamedev-11867">Finite-State Machines: Theory and Implementation</a></p>
+        
+        <section id="Article3">
+            <section id="ArticleSection">
+                <div class="Container">
+                    <h2>An example of a FSM on a Boss</h2>
+                    <div class="Line"></div>
+                    <div class="TextContainer">
+                        <p>See below a table represnting states a Boss could have when fighting a player;</p>
+                        <table id="aiTable">
+                            <tr>
+                                <!-- Table headers -->
+                                <th>If</th>
+                                <th>State</th>
+                            </tr>
+                            <tr>
+                                <!-- Table contents -->
+                                <td>Player is near.</td>
+                                <td>Enter the melee attack state and target the player.</td>
+                            </tr>
+                            <tr>
+                                <!-- Table contents -->
+                                <td>Player is far.</td>
+                                <td>Enter the ranged attack state and target the player.</td>
+                            </tr>
+                            <tr>
+                                <!-- Table contents -->
+                                <td>Boss health is below 50%</td>
+                                <td>Enter the next attack pattern that is more challenging for the player</td>
+                            </tr>
+                            <tr>
+                                <!-- Table contents -->
+                                <td>Boss health is below 30% and the player is far away</td>
+                                <td>Enter the defensive state and heal.</td>
+                            </tr>
+                        </table>
+                        <p>Hopefully this table allows you to see in greater detail as to what a Finite-State Machine can be used for and how useful it can be.</p>
+                        <p>Of course there are ways of improving the flow of the machine as well as the execution and implementation.</p>
+                        <p>To read more on this subject and find more ways in implementing a FSM, refer to this article by Evatotuts+ <a class="linkTxt" href="https://gamedevelopment.tutsplus.com/tutorials/finite-state-machines-theory-and-implementation--gamedev-11867" target="https://gamedevelopment.tutsplus.com/tutorials/finite-state-machines-theory-and-implementation--gamedev-11867">Finite-State Machines: Theory and Implementation</a></p>
+                        <div>
+                            <br>
+                            <a id="fsmExample" class="Button">SAVE</a>
+                            <a id="likeBtn5" class="likeBtn">LIKE</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </section>
         <!-- Article 4 End -->
 
         <!-- Footer Section -->
         <section id="FooterSection">
-            <p>Created by Evan Bezuidenhout</p>
+            <p>Created by <a href="https://evanbezza.com/" style="color: #A15CD5">Evan Bezuidenhout</a></p>
         </section>
         <!-- Footer Section End -->
     </body>
